@@ -5,6 +5,12 @@ command 1 :
 ````
 
 Command 2 : 
-......git
+````git
 find /path/to/dir/ -printf '%s %p\n'| sort -nr | head -10
-......
+````
+
+Command 3:
+```git
+# another option ##
+find /path/to/search/ -type f -iname "*.mp4" -printf '%s %p\n'| sort -nr | head -10
+```
