@@ -27,3 +27,14 @@ Example :
 truncate -s 10K filename
 truncate -s 0 filename
 ````
+
+- Get the total diskspace utilized
+```git 
+ df /|grep /|awk -F" " '{print $5}'| sed 's/%//g'
+
+where :
+ df /                  =  get all space information about the root directory
+grep /                 = filter the record
+awk -F" " '{print $5}' =  print column number 5 information filtered by space
+sed 's/%//g'           =  remove the % from the output and display the final value 
+```
